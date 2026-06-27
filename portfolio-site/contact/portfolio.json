@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "title": "Mountain Dawn",
+      "category": "Landscape",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80&auto=format&fit=crop",
+      "location": "Rocky Mountains, Colorado",
+      "aperture": "f/8",
+      "shutter": "1/250s",
+      "iso": "ISO 200",
+      "description": "First light breaking over the eastern ridge — captured at 5:30 am after a four-hour approach hike through the dark.",
+      "size": "wide"
+    },
+    {
+      "title": "Into the Forest",
+      "category": "Landscape",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80&auto=format&fit=crop",
+      "location": "Black Forest, Germany",
+      "aperture": "f/4",
+      "shutter": "1/60s",
+      "iso": "ISO 800",
+      "description": "Fog-laden silence between ancient pines on a November morning.",
+      "size": "tall"
+    },
+    {
+      "title": "Pacific Horizon",
+      "category": "Landscape",
+      "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1200&q=80&auto=format&fit=crop",
+      "location": "Big Sur, California",
+      "aperture": "f/11",
+      "shutter": "1/500s",
+      "iso": "ISO 100",
+      "description": "",
+      "size": "normal"
+    },
+    {
+      "title": "Desert Light",
+      "category": "Travel",
+      "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1400&q=80&auto=format&fit=crop",
+      "location": "Sahara Desert, Morocco",
+      "aperture": "f/5.6",
+      "shutter": "1/1000s",
+      "iso": "ISO 400",
+      "description": "The hour before sunset when the dunes cast long blue shadows across the sand.",
+      "size": "large"
+    },
+    {
+      "title": "Still Lake",
+      "category": "Landscape",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80&auto=format&fit=crop",
+      "location": "Banff National Park, Canada",
+      "aperture": "f/10",
+      "shutter": "1/125s",
+      "iso": "ISO 100",
+      "description": "",
+      "size": "normal"
+    },
+    {
+      "title": "City After Rain",
+      "category": "Street",
+      "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=80&auto=format&fit=crop",
+      "location": "New York, USA",
+      "aperture": "f/2.0",
+      "shutter": "1/30s",
+      "iso": "ISO 3200",
+      "description": "Reflections on wet asphalt — 2 am, Manhattan.",
+      "size": "wide"
+    },
+    {
+      "title": "Volcanic Coast",
+      "category": "Landscape",
+      "image": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1200&q=80&auto=format&fit=crop",
+      "location": "Iceland",
+      "aperture": "f/9",
+      "shutter": "1/200s",
+      "iso": "ISO 200",
+      "description": "",
+      "size": "normal"
+    },
+    {
+      "title": "Winter Pass",
+      "category": "Travel",
+      "image": "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1200&q=80&auto=format&fit=crop",
+      "location": "Swiss Alps",
+      "aperture": "f/8",
+      "shutter": "1/320s",
+      "iso": "ISO 100",
+      "description": "Mid-January. Wind chill −28 °C. Summit reached at noon.",
+      "size": "tall"
+    }
+  ]
+}
