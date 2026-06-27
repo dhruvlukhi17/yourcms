@@ -11,7 +11,7 @@ backend:
   branch: main          # Change to "master" if your repo uses that
 
 # Where uploaded images are stored in the repo
-media_folder: "images/uploads"
+media_folder: "portfolio-site/images/uploads"
 # How those images are referenced in content files
 public_folder: "/images/uploads"
 
@@ -31,7 +31,7 @@ collections:
 
       - name: "general"
         label: "General"
-        file: "_data/settings.json"
+        file: "portfolio-site/_data/settings.json"
         format: json
         description: "Core site identity and contact info."
         fields:
@@ -76,7 +76,7 @@ collections:
 
       - name: "photos"
         label: "Photo Library"
-        file: "_data/portfolio.json"
+        file: "portfolio-site/_data/settings.json"
         format: json
         fields:
           - label: "Photos"
