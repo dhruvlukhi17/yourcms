@@ -3,6 +3,7 @@
 # ============================================================
 
 [build]
+  base    = "portfolio-site"
   publish = "."     # Root of the repo is the published site
 
 # Security headers for the admin panel
