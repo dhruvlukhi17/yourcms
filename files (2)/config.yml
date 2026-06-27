@@ -1,0 +1,152 @@
+# ============================================================
+# Decap CMS — config.yml
+# Photography Portfolio
+#
+# Backend: Netlify + Git Gateway (already configured ✓)
+# Docs: https://decapcms.org/docs/configuration-options/
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main          # Change to "master" if your repo uses that
+
+# Where uploaded images are stored in the repo
+media_folder: "images/uploads"
+# How those images are referenced in content files
+public_folder: "/images/uploads"
+
+# Show a live preview of the site in the CMS editor
+# site_url: https://YOUR-NETLIFY-SITE.netlify.app
+
+# ============================================================
+# COLLECTIONS
+# ============================================================
+collections:
+
+  # ——— SITE SETTINGS ———
+  - name: "site_settings"
+    label: "⚙️ Site Settings"
+    description: "Global settings: your name, bio, hero image, and contact links."
+    files:
+
+      - name: "general"
+        label: "General"
+        file: "_data/settings.json"
+        format: json
+        description: "Core site identity and contact info."
+        fields:
+          - label: "Photographer Name"
+            name: "title"
+            widget: "string"
+            hint: "Shown in the navbar, hero heading, and footer."
+
+          - label: "Hero Subtitle"
+            name: "hero_subtitle"
+            widget: "string"
+            hint: "Short line below your name in the hero — e.g. Landscape · Portrait · Travel"
+
+          - label: "About / Bio"
+            name: "about"
+            widget: "text"
+            hint: "2–3 sentences about your work, shown in the About section."
+
+          - label: "Contact Email"
+            name: "email"
+            widget: "string"
+            required: false
+            hint: "Used for the 'Email Me' button in the Contact section."
+
+          - label: "Instagram URL"
+            name: "instagram"
+            widget: "string"
+            required: false
+            hint: "Full URL — e.g. https://instagram.com/yourusername"
+
+          - label: "Hero Background Image"
+            name: "hero_image"
+            widget: "image"
+            hint: "Full-screen background for the hero. Landscape-orientation images work best. You can also paste an Unsplash URL."
+            choose_url: true   # allows pasting a URL instead of uploading
+
+  # ——— PORTFOLIO ———
+  - name: "portfolio"
+    label: "🖼️ Portfolio"
+    description: "Add, remove, and reorder your photos. Each photo appears in the gallery grid."
+    files:
+
+      - name: "photos"
+        label: "Photo Library"
+        file: "_data/portfolio.json"
+        format: json
+        fields:
+          - label: "Photos"
+            name: "items"
+            widget: "list"
+            label_singular: "Photo"
+            # Summary line shown in the collapsed list item
+            summary: "{{fields.title}}  ·  {{fields.category}}  ·  {{fields.location}}"
+            fields:
+
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                hint: "e.g. Mountain Dawn"
+
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Landscape",    value: "Landscape" }
+                  - { label: "Portrait",     value: "Portrait" }
+                  - { label: "Street",       value: "Street" }
+                  - { label: "Architecture", value: "Architecture" }
+                  - { label: "Wildlife",     value: "Wildlife" }
+                  - { label: "Abstract",     value: "Abstract" }
+                  - { label: "Travel",       value: "Travel" }
+
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                hint: "Upload a photo, or paste an Unsplash URL (e.g. https://images.unsplash.com/photo-…)."
+                choose_url: true
+
+              - label: "Location"
+                name: "location"
+                widget: "string"
+                required: false
+                hint: "e.g. Rocky Mountains, Colorado"
+
+              - label: "Aperture"
+                name: "aperture"
+                widget: "string"
+                required: false
+                hint: "e.g. f/2.8  — shown as EXIF overlay on hover"
+
+              - label: "Shutter Speed"
+                name: "shutter"
+                widget: "string"
+                required: false
+                hint: "e.g. 1/500s"
+
+              - label: "ISO"
+                name: "iso"
+                widget: "string"
+                required: false
+                hint: "e.g. ISO 800"
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                required: false
+                hint: "Optional caption shown in the lightbox when the photo is opened."
+
+              - label: "Grid Size"
+                name: "size"
+                widget: "select"
+                default: "normal"
+                hint: "Controls how much space this photo takes up in the masonry grid."
+                options:
+                  - { label: "Normal  (1 col × 1 row)", value: "normal" }
+                  - { label: "Wide    (2 col × 1 row)", value: "wide"   }
+                  - { label: "Tall    (1 col × 2 row)", value: "tall"   }
+                  - { label: "Large   (2 col × 2 row)", value: "large"  }
